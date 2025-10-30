@@ -1,0 +1,11 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock
+.DS_Store
+
+# Project files (don't push to repo)
+jekyll-blog-complete.zip
+QUICK-START.md

@@ -1,0 +1,44 @@
+# Site settings
+title: "Rosalind Gash - The Dev Blog"
+author: "Rosalind Gash"
+description: "Building accessible SaaS as a solo founder using AI-assisted development"
+baseurl: "" # Leave empty for root domain or add /blog if in subdirectory
+url: "https://yourusername.github.io" # Update with your GitHub Pages URL
+portfolio_url: "https://rosalindgash.org"
+
+# Permalink style
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/page/:num/"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false

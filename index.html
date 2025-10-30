@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<div class="container">
+    <!-- Featured Post (if you have one marked as featured) -->
+    {% assign featured_post = site.posts | where: "featured", true | first %}
+    {% if featured_post %}
+    <article class="featured-post">
+        <div class="featured-badge">FEATURED</div>
+        <div class="featured-content">
+            <h2><a href="{{ featured_post.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ featured_post.title }}</a></h2>
+            <div class="meta">
+                Published {{ featured_post.date | date: "%B %d, %Y" }} • {{ featured_post.content | number_of_words | divided_by: 200 }} min read
+                {% if featured_post.tags %}
+                 • {% for tag in featured_post.tags %}#{{ tag }}{% unless forloop.last %} {% endunless %}{% endfor %}
+                {% endif %}
+            </div>
+            <p class="excerpt">{{ featured_post.excerpt | strip_html }}</p>
+            <a href="{{ featured_post.url | relative_url }}" class="read-more">Read Full Article →</a>
+        </div>
+    </article>
+    {% endif %}
+
+    <!-- Content with Sidebar -->
+    <div class="content-wrapper">
+        <!-- Blog Posts Grid -->
+        <div>
+            <div class="blog-grid">
+                {% for post in paginator.posts %}
+                    {% unless post.featured %}
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            {% if post.tags %}
+                            <span class="category-tag category-tech">
+                                {% for tag in post.tags limit:2 %}#{{ tag }}{% unless forloop.last %} {% endunless %}{% endfor %}
+                            </span>
+                            {% endif %}
+                            <h3><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ post.title }}</a></h3>
+                            <div class="meta">{{ post.date | date: "%B %d, %Y" }} • {{ post.content | number_of_words | divided_by: 200 }} min read</div>
+                            <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                            <a href="{{ post.url | relative_url }}">Read more →</a>
+                        </div>
+                    </article>
+                    {% endunless %}
+                {% endfor %}
+            </div>
+
+            <!-- Pagination -->
+            {% if paginator.total_pages > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous page">← Previous</a>
+                {% endif %}
+
+                {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                        <span class="active">{{ page }}</span>
+                    {% elsif page == 1 %}
+                        <a href="{{ '/' | relative_url }}">{{ page }}</a>
+                    {% else %}
+                        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}" aria-label="Next page">Next →</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Tags -->
+            <div class="sidebar-section">
+                <h3>Tags</h3>
+                <ul class="category-list">
+                    {% assign all_tags = site.tags | sort %}
+                    {% for tag in all_tags limit:6 %}
+                    <li>
+                        <a href="{{ '/tag/' | append: tag[0] | slugify | relative_url }}">
+                            <span>#{{ tag[0] }}</span>
+                            <span class="category-count">{{ tag[1] | size }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="sidebar-section">
+                <h3>Popular Posts</h3>
+                <ul class="category-list">
+                    {% for post in site.posts limit:3 %}
+                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>
