@@ -2,8 +2,8 @@
 title: "Rosalind Gash - The Dev Blog"
 author: "Rosalind Gash"
 description: "Building accessible SaaS as a solo founder using AI-assisted development"
-baseurl: "" # Leave empty for root domain or add /blog if in subdirectory
-url: "https://yourusername.github.io" # Update with your GitHub Pages URL
+baseurl: "" # Blog is in subdirectory
+url: "https://blog.rosalindgash.org" # Your custom domain
 portfolio_url: "https://rosalindgash.org"
 
 # Permalink style

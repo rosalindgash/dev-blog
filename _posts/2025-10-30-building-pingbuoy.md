@@ -391,18 +391,3 @@ Even this article required human oversight - Claude Code did the heavy lifting o
 - Adjust the tone in places
 
 It's AI-assisted writing about AI-assisted development. Meta? Yes. But also a perfect example of how human-AI collaboration actually works.
-
-*PingBuoy was built over 54 development sessions from September to October 2025.*
-
-## About the Author
-
-**Rosalind Gash** is the founder of PingBuoy, a website monitoring service for solopreneurs and small businesses. She's been building websites since 1999 and has technical training in computer science, digital journalism, and holds an MBA.
-
-As a solo founder, Rosalind specializes in AI-assisted development workflows and builds tools for underserved markets. She's also an independent researcher examining how adaptive digital technologies enable entrepreneurship and academic research for disabled individuals, with articles in preparation for publishing in peer-reviewed journals. She's a member of the Society for Disability Studies.
-
-When she's not coding or working on research, she likes to sew.
-
-## Connect:
-
-- Website: [rosalindgash.org](https://rosalindgash.org)
-- PingBuoy: [pingbuoy.com](https://pingbuoy.com)
