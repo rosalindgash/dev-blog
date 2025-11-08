@@ -4,6 +4,12 @@ layout: default
 
 <div class="container">
     <article class="post-content">
+        {% if page.cover_image %}
+        <div class="post-cover-image" style="margin: -2rem -2rem 2rem -2rem; border-radius: 8px; overflow: hidden;">
+            <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" style="width: 100%; height: auto; display: block;">
+        </div>
+        {% endif %}
+
         <h1>{{ page.title }}</h1>
         <div class="meta" style="margin-bottom: 3rem;">
             Published {{ page.date | date: "%B %d, %Y" }} • {{ content | number_of_words | divided_by: 200 }} min read

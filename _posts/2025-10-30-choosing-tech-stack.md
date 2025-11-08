@@ -5,6 +5,7 @@ date: 2025-10-30
 tags: [Development, Tech-Stack, Best-Practices]
 excerpt: "Choosing technologies for your project isn't about what's trendy. Here's how to make decisions you won't regret six months from now."
 featured: false
+cover_image: /assets/images/modern-tech-stacks.png
 ---
 
 Every developer has been there: excited about a new project, browsing through the endless options for frameworks, databases, and tools. Should you use React or Vue? PostgreSQL or MongoDB? Next.js or vanilla Node? The newest JavaScript framework or something stable?

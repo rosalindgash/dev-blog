@@ -8,6 +8,13 @@ layout: default
     {% if featured_post %}
     <article class="featured-post">
         <div class="featured-badge">FEATURED</div>
+        {% if featured_post.cover_image %}
+        <div class="featured-image" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
+            <a href="{{ featured_post.url | relative_url }}">
+                <img src="{{ featured_post.cover_image | relative_url }}" alt="{{ featured_post.title }}" style="width: 100%; height: auto; display: block;">
+            </a>
+        </div>
+        {% endif %}
         <div class="featured-content">
             <h2><a href="{{ featured_post.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ featured_post.title }}</a></h2>
             <div class="meta">
@@ -30,6 +37,13 @@ layout: default
                 {% for post in paginator.posts %}
                     {% unless post.featured %}
                     <article class="blog-card">
+                        {% if post.cover_image %}
+                        <div class="blog-card-image" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;">
+                            <a href="{{ post.url | relative_url }}">
+                                <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                            </a>
+                        </div>
+                        {% endif %}
                         <div class="blog-card-content">
                             {% if post.tags %}
                             <span class="category-tag category-tech">

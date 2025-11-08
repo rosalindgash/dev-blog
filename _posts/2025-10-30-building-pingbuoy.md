@@ -5,6 +5,7 @@ date: 2025-10-30
 tags: [SaaS, Solo-Founder, AI-Development, Case-Study]
 excerpt: "The honest story of building a website monitoring SaaS across 54 development sessions. No overnight success here—just real development with all its challenges, setbacks, and victories."
 featured: true
+cover_image: /assets/images/pingbuoy-hero.png
 ---
 
 If you've spent any time on Twitter or LinkedIn lately, you've probably seen posts like: "Built a $10k/month SaaS in a weekend!" or "From idea to launch in 48 hours!"
@@ -19,7 +20,7 @@ This is the story of building PingBuoy, a website monitoring SaaS application, a
 
 PingBuoy is a website monitoring platform that helps website owners know when their sites go down. Think of it as a watchdog for your website that:
 
-- Checks if your site is online every 1-5 minutes (depending on your plan)
+- Checks if your site is online every 3 or 10 minutes (depending on your plan)
 - Scans for broken links across your pages
 - Sends email alerts when something goes wrong
 - Provides charts showing your site's uptime history
