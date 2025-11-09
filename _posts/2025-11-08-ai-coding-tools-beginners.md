@@ -2,10 +2,9 @@
 layout: post
 title: "How to Use AI Tools for Coding for Beginners"
 date: 2025-11-08
-tags: ["ai", "beginners", "coding", "tutorial"]
+tags: [ai, beginners, coding, tutorial]
 excerpt: "A realistic guide to using AI coding assistants when you're just starting out. Learn what works, what doesn't, and how to avoid common pitfalls."
 featured: false
-cover_image: /assets/images/ai-coding-tools.png
 ---
 
 AI coding tools like Claude, ChatGPT, and GitHub Copilot have changed how developers work, but they're not magic wands that let you code without understanding programming. I've used AI extensively while building my projects, including my SaaS application PingBuoy, and I want to share what actually works - and what doesn't.

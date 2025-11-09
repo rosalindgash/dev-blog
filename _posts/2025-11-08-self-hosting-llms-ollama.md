@@ -2,10 +2,9 @@
 layout: post
 title: "Self-Hosting LLMs: A Practical Guide to Ollama"
 date: 2025-11-08
-tags: ["ollama", "llm", "self-hosting", "ai"]
+tags: [ollama, llm, self-hosting, ai]
 excerpt: "An honest look at running large language models locally with Ollama. Learn about hardware requirements, costs, capabilities, and when local LLMs make sense."
 featured: false
-cover_image: /assets/images/llm-ollama.png
 ---
 
 Large Language Models (LLMs) like GPT-4, Claude, and others have become essential tools for developers, but they come with costs, privacy concerns, and you need internet to use them. Ollama offers a way to run LLMs on your own computer instead. This guide will walk you through what Ollama is, why you might want to use it, and how to get started.
