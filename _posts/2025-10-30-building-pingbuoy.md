@@ -5,7 +5,7 @@ date: 2025-10-30
 tags: [SaaS, Solo-Founder, AI-Development, Case-Study]
 excerpt: "The honest story of building a website monitoring SaaS across 54 development sessions. No overnight success here—just real development with all its challenges, setbacks, and victories."
 featured: true
-cover_image: /assets/images/pingbuoy-hero.png
+cover_image: /assets/images/pingbuoy-header-logo.png
 ---
 
 If you've spent any time on Twitter or LinkedIn lately, you've probably seen posts like: "Built a $10k/month SaaS in a weekend!" or "From idea to launch in 48 hours!"
