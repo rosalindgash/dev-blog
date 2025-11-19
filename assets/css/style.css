@@ -6,18 +6,18 @@
 
 :root {
     /* Color palette matching personal branding site */
-    --primary-amber: #d97706;
-    --amber-light: #fbbf24;
-    --amber-dark: #b45309;
+    --primary-blue: #2563eb;
+    --blue-light: #3b82f6;
+    --blue-dark: #1d4ed8;
     --purple-accent: #a78bfa;
     --purple-light: #e9d5ff;
     --dark-bg: #1e293b;
     --darker-bg: #0f172a;
-    --light-bg: #fefce8;
-    --warm-bg: #fffbeb;
+    --light-bg: #eff6ff;
+    --warm-bg: #dbeafe;
     --text-dark: #1e293b;
-    --text-light: #64748b;
-    --border-color: #fde68a;
+    --text-light: #475569;
+    --border-color: #bfdbfe;
     --border-neutral: #e2e8f0;
 }
 
@@ -67,8 +67,36 @@ nav {
 }
 
 .nav-links a.active {
-    color: var(--primary-amber);
-    border-bottom: 2px solid var(--primary-amber);
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+/* Accessibility - Focus Indicators */
+*:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2563eb;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Main Container */
@@ -90,7 +118,7 @@ nav {
 
 .featured-badge {
     background: var(--dark-bg);
-    color: var(--amber-light);
+    color: var(--blue-light);
     padding: 0.5rem 1rem;
     display: inline-block;
     font-size: 0.875rem;
@@ -175,12 +203,12 @@ nav {
 }
 
 .category-research {
-    background: rgba(217, 119, 6, 0.05);
+    background: rgba(37, 99, 235, 0.05);
     color: var(--text-light);
 }
 
 .category-tech {
-    background: rgba(251, 191, 36, 0.08);
+    background: rgba(37, 99, 235, 0.08);
     color: var(--text-light);
 }
 
@@ -218,7 +246,7 @@ nav {
 }
 
 .blog-card a:hover {
-    color: var(--primary-amber);
+    color: var(--primary-blue);
 }
 
 /* Post Content */
@@ -292,7 +320,7 @@ nav {
 }
 
 .post-content blockquote {
-    border-left: 4px solid var(--primary-amber);
+    border-left: 4px solid var(--primary-blue);
     padding-left: 1.5rem;
     margin: 1.5rem 0;
     font-style: italic;

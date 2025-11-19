@@ -11,7 +11,7 @@ layout: default
         {% if featured_post.cover_image %}
         <div class="featured-image" style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
             <a href="{{ featured_post.url | relative_url }}">
-                <img src="{{ featured_post.cover_image | relative_url }}" alt="{{ featured_post.title }}" style="width: 100%; height: auto; display: block;">
+                <img src="{{ featured_post.cover_image | relative_url }}" alt="Cover image for {{ featured_post.title }}" style="width: 100%; height: auto; display: block;">
             </a>
         </div>
         {% endif %}
@@ -40,7 +40,7 @@ layout: default
                         {% if post.cover_image %}
                         <div class="blog-card-image" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;">
                             <a href="{{ post.url | relative_url }}">
-                                <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                                <img src="{{ post.cover_image | relative_url }}" alt="Cover image for {{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
                             </a>
                         </div>
                         {% endif %}
@@ -85,7 +85,7 @@ layout: default
         </div>
 
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" aria-label="Blog sidebar">
             <!-- Tags -->
             <div class="sidebar-section">
                 <h3>Tags</h3>
